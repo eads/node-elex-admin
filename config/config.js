@@ -9,7 +9,7 @@ var config = {
       name: 'node-elex'
     },
     port: 3000,
-    db: 'postgres://localhost/node-elex-development'
+    db: 'postgres://localhost/elex'
   },
 
   test: {
@@ -18,7 +18,7 @@ var config = {
       name: 'node-elex'
     },
     port: 3000,
-    db: 'postgres://localhost/node-elex-test'
+    db: 'postgres://localhost/elex'
   },
 
   production: {
@@ -27,7 +27,7 @@ var config = {
       name: 'node-elex'
     },
     port: 3000,
-    db: 'postgres://localhost/node-elex-production'
+    db: 'postgres://localhost/elex'
   }
 };
 

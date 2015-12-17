@@ -1,21 +1,14 @@
-// Example model
-
-
 module.exports = function (sequelize, DataTypes) {
 
-  var Article = sequelize.define('Article', {
-    title: DataTypes.STRING,
-    url: DataTypes.STRING,
-    text: DataTypes.STRING
+  var Election = sequelize.define('Election', {
+    electiondate: DataTypes.DATEONLY,
+    liveresults: DataTypes.BOOLEAN,
+    testresults: DataTypes.BOOLEAN
   }, {
-    classMethods: {
-      associate: function (models) {
-        // example on how to add relations
-        // Article.hasMany(models.Comments);
-      }
-    }
+    tableName: 'elections',
+    timestamps: false
   });
 
-  return Article;
+  return Election;
 };
 

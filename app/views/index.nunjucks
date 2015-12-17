@@ -2,5 +2,7 @@
 
 {% block content %}
   <h1>{{ title }}</h1>
-  <p>Welcome to {{ title }}</p>
+  {% for election in elections %}
+  <p><a href="#">{{ election.electiondate|date('LL') }}</a></p>
+  {% endfor %}
 {% endblock %}
