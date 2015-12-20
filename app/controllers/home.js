@@ -7,7 +7,7 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-  db.Election.findAll().then(function (elections) {
+  db.Election.findAll({order: [['electiondate', 'DESC']]}).then(function (elections) {
     res.render('index', {
       title: 'Elections',
       elections: elections

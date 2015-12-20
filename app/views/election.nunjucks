@@ -1,0 +1,5 @@
+{% extends 'layout.nunjucks' %}
+
+{% block content %}
+  <h1>{{ election.electiondate|date('dddd, MMMM Do, YYYY') }}</h1>
+{% endblock %}

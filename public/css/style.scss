@@ -1,10 +1,45 @@
 @import '../components/bootstrap/scss/bootstrap';
 
+$pink: rgba(246, 0, 96, 1);
+$pinkTransparent: rgba(246, 0, 96, 0.7);
+$bodyfont: 'PT Mono', Helvetica, Arial, sans-serif;
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: $bodyfont;
 }
 
-a {
-  color: #00B7FF;
+#content {
+  padding-top: 2rem;
+}
+
+.navbar {
+  padding: 0.15rem 1rem;
+  background-color: $pink;
+
+  .navbar-brand {
+    font-weight: bold;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: rgba(255, 255, 255, 0.8);
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+}
+
+table.table {
+  thead {
+    background-color: #000;
+    color: #fff;
+  }
+  th, td {
+    padding: 0.3rem 0.4rem;
+  }
 }

@@ -1,8 +1,26 @@
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
-  <h1>{{ title }}</h1>
-  {% for election in elections %}
-  <p><a href="#">{{ election.electiondate|date('LL') }}</a></p>
-  {% endfor %}
+
+<h1>{{ title }}</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <td>date</td>
+      <td>live results</td>
+      <td>test results</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for election in elections %}
+    <tr>
+      <td><a href="{{ election.id }}">{{ election.electiondate|date('LL') }}</a></td>
+      <td>{{ election.liveresults }}</td>
+      <td>{{ election.testresults }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
 {% endblock %}
